@@ -1,0 +1,181 @@
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+.background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.gif') center center fixed;
+    z-index: 1;
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2; /* Capa de opacidad encima de la imagen de fondo */
+}
+
+
+
+#container {
+    z-index: 3; /*contenido encima de la capa de opacidad */
+    text-align: center;
+    padding: 1.25em;
+    background-color: #ffffff;
+    border-radius: 0.625em;
+    box-shadow: 0 0 0.625em rgba(0, 0, 0, 0.1);
+    position: relative; /* Asegura que esté posicionado en relación con el body */
+}
+
+h1 {
+    color: #333333;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#inputText{
+    width: 15em;
+    font-size: 1.5em;
+}
+
+#inputText::placeholder {
+    font-size: .6em;
+}
+
+button {
+    background-color: #4caf50;
+    color: #ffffff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultBox {
+    display: none;
+    margin-top: 20px;
+    z-index: 3; /*contenido encima de la capa de opacidad */
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    
+    position: relative; /* Asegura que esté posicionado en relación con el body */
+}
+
+
+#resultBox label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#result {
+    font-size: 20px;
+    color: #1e88e5;
+}
+
+#container, #resultBox, #result{
+   margin-top: 10%;
+}
+
+@media screen and (max-width: 480px) {
+    #container {
+        
+        margin: 25% 1.250em .625em 1.250em;
+        z-index: 3; /*contenido encima de la capa de opacidad */
+        text-align: center;
+        padding: 2.5em;
+        background-color: #ffffff;
+        border-radius: 0.625em;
+        position: relative; /* Asegura que esté posicionado en relación con el body */
+
+    }
+
+    #inputText{
+        width: 15em;
+        font-size: 1em;
+    }
+    
+    #inputText::placeholder {
+        font-size: .6em;
+    }
+
+    button {
+        background-color: #4caf50;
+        color: #ffffff;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    #resultBox {
+        display: none;
+        margin-top: 20px;
+        z-index: 3; /*contenido encima de la capa de opacidad */
+        text-align: center;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        
+        position: relative; /* Asegura que esté posicionado en relación con el body */
+    }
+    
+    
+    #resultBox label {
+        font-size: 1.125em;
+        margin-bottom: 0.625em;
+        display: block;
+    }
+    
+    #result {
+        font-size: 1.5em;
+        color: #1e88e5;
+    }
+    
+    #resultBox, #result{
+       margin-top: 5%;
+    }
+ 
+    
+     
+
+}

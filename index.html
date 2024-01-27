@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-container">
+        <img src="background.gif">
+    </div>
+    <div id="container">
+        <h1>Reto Encriptador</h1>
+        <label for="inputText">Ingrese un texto:</label>
+        <input type="text" id="inputText" placeholder="Escriba en minusculas, sin caracteres especiales" />
+        <!--<button id="encryptButton" onclick="convertToLeet()">Encriptar</button>-->
+
+        <div>
+            <button id="encryptButton" onclick="convertToLeet()">Encriptar</button>
+            
+            
+            
+        </div>
+
+        <!-- Resultado de la conversión en un cuadro -->
+        <div id="resultBox" style="display: none;">
+            <label for="result">Resultado:</label>
+            <div id="result"></div>
+           <button class="btn" onclick="copiarContenido()">¡Copiar!</button>
+        </div>
+    
+    </div>
+
+ 
+
+    <!-- Script JavaScript para la conversión a Leet Speak -->
+    <script src="script.js"></script>
+</body>
+</html>
